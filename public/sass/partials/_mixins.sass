@@ -1,0 +1,38 @@
+@mixin transition($transitionVal)
+	-webkit-transition: $transitionVal
+	-moz-transition: $transitionVal
+	-ms-transition: $transitionVal
+	-o-transition: $transitionVal
+	transition: $transitionVal
+
+@mixin transform($transformVal)
+	-webkit-transform: $transformVal
+	-moz-transform: $transformVal
+	-ms-transform: $transformVal
+	-o-transform: $transformVal
+	transform: $transformVal
+
+@mixin animation($animationVal)
+	-webkit-animation: $animationVal
+	-moz-animation: $animationVal
+	-ms-animation: $animationVal
+	-o-animation: $animationVal
+	animation: $animationVal
+
+@mixin textShadow($textShadowVal)
+	-webkit-text-shadow: $textShadowVal
+	-moz-text-shadow: $textShadowVal
+	-ms-text-shadow: $textShadowVal
+	-o-text-shadow: $textShadowVal
+	text-shadow: $textShadowVal
+
+@mixin boxShadow($boxShadowVal)
+	-webkit-box-shadow: $boxShadowVal
+	-moz-box-shadow: $boxShadowVal
+	-ms-box-shadow: $boxShadowVal
+	-o-box-shadow: $boxShadowVal
+	box-shadow: $boxShadowVal
+
+@mixin mQ($arg)
+	@media screen and (max-width: $arg)
+		@content

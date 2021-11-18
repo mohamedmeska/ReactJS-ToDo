@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body, ul, ol, li, form, fieldset, legend {
+  margin: 0;
+  padding: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+li {
+  margin-left: -4px;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a, a:hover, a:focus, a:active, a:visited {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.clear-fix {
+  clear: both;
+}
+
+@font-face {
+  font-family: "Womby";
+  src: url("../../fonts/Womby/Womby-Regular.eot");
+  src: url("../../fonts/Womby/Womby-Regular.otf");
+  src: url("../../fonts/Womby/Womby-Regular.ttf");
+  src: url("../../fonts/Womby/Womby-Regular.woff");
+  src: url("../../fonts/Womby/Womby-Regular.woff2");
+}
+@font-face {
+  font-family: "ProximaNova";
+  src: url("../../fonts/ProximaNova/ProximaNova-Regular.eot");
+  src: url("../../fonts/ProximaNova/ProximaNova-Regular.otf");
+  src: url("../../fonts/ProximaNova/ProximaNova-Regular.ttf");
+  src: url("../../fonts/ProximaNova/ProximaNova-Regular.woff");
+}
+@font-face {
+  font-family: "ProximaNovaBold";
+  src: url("../../fonts/ProximaNovaBold/ProximaNova-Bold.eot");
+  src: url("../../fonts/ProximaNovaBold/ProximaNova-Bold.otf");
+  src: url("../../fonts/ProximaNovaBold/ProximaNova-Bold.ttf");
+  src: url("../../fonts/ProximaNovaBold/ProximaNova-Bold.woff");
+}
+.swal2-popup {
+  font-size: 1.6rem !important;
+}
+
+h1, h2, h3 {
+  font-family: "Womby", ProximaNovaBold, ProximaNova, Arial, sans-serif;
+  font-weight: bold;
+}
+
+body {
+  font-family: "ProximaNova", Arial, sans-serif;
+  background-color: #fed841;
+}
+body #root {
+  min-height: 100vh;
+  padding: 100px 15px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+body #root .todo_wrapper {
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+}
+body #root .todo_wrapper h1.todo_title {
+  position: relative;
+  display: inline-block;
+  font-size: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+body #root .todo_wrapper h1.todo_title .todo_title_to {
+  margin-right: 20px;
+  color: #000;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 75%, #fff 75%);
+  background-size: 100px 1em;
+}
+body #root .todo_wrapper h1.todo_title .todo_title_do {
+  color: #e81f76;
+}
+body #root .todo_wrapper h1.todo_title .todo_title_seperator {
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+body #root .todo_wrapper table.todo_body {
+  margin-bottom: 0;
+  box-shadow: 0 1px 25px 0px #c8b72b;
+  cursor: default;
+}
+body #root .todo_wrapper table.todo_body tr {
+  border-bottom: 1px solid #ddd;
+}
+body #root .todo_wrapper table.todo_body tr:last-child {
+  border-bottom: none;
+}
+body #root .todo_wrapper table.todo_body tr th, body #root .todo_wrapper table.todo_body tr td {
+  text-align: center;
+  border: none;
+  border-right: 1px solid #ddd;
+}
+body #root .todo_wrapper table.todo_body tr th:last-child, body #root .todo_wrapper table.todo_body tr td:last-child {
+  border-right: none;
+}
+body #root .todo_wrapper table.todo_body tr th {
+  color: #fff;
+}
+body #root .todo_wrapper table.todo_body tr td {
+  word-break: break-all;
+}
+body #root .todo_wrapper table.todo_body tr.empty_row {
+  height: 75px;
+  font-family: "ProximaNovaBold", Arial, sans-serif;
+}
+body #root .todo_wrapper table.todo_body tr.empty_row td {
+  border-right: none;
+}
+body #root .todo_wrapper table.todo_body thead {
+  background-color: #e81f76;
+}
+body #root .todo_wrapper table.todo_body tbody {
+  background-color: #fff;
+}
+body #root .todo_wrapper table.todo_body tbody tr td {
+  vertical-align: middle;
+}
+body #root .todo_wrapper table.todo_body tbody tr td span.task_action {
+  color: #e81f76;
+  font-size: bold;
+  cursor: pointer;
+}
+body #root .todo_wrapper table.todo_body tfoot {
+  background-color: #ebebeb;
+}
+body #root .todo_wrapper table.todo_body tfoot tr td {
+  padding: 0;
+}
+body #root .todo_wrapper table.todo_body tfoot tr td input {
+  width: 100%;
+  padding: 8px;
+  background-color: transparent;
+  border: none;
+  cursor: text;
+}
+body #root .todo_wrapper table.todo_body tfoot tr td input[type=submit] {
+  background-color: #e81f76;
+  color: #fff;
+  font-family: "ProximaNovaBold", Arial, sans-serif;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+body #root .todo_wrapper table.todo_body tfoot tr td input[type=submit]:hover {
+  background-color: #c0145e;
+}
+
+/*# sourceMappingURL=style.css.map */
